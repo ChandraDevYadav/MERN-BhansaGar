@@ -1,7 +1,8 @@
 import jwt from 'jsonwebtoken';
 import Admin from '../models/adminModel.js';
 import dotenv from 'dotenv';
-import bcrypt from 'bcrypt'
+const bcrypt = require('bcryptjs');
+
 
 dotenv.config();
 

@@ -10,16 +10,12 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
 
-  // State to manage whether to show the full description
   const [showFullDescription, setShowFullDescription] = useState(false);
 
-  // State to manage the selected rating
   const [selectedRating, setSelectedRating] = useState(0);
 
-  // State to manage if the user has already rated
   const [hasRated, setHasRated] = useState(false);
 
-  // Calculate the average rating
   const averageRating = ratings.length
     ? ratings.reduce((acc, curr) => acc + curr, 0) / ratings.length
     : 0;
@@ -44,11 +40,8 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
         const data = await response.json();
 
         if (response.ok) {
-          // Check if ratings exist and update state
           if (data.ratings && data.ratings.length > 0) {
-            // Assuming you want to get the user's rating from the list
-            // Implement logic to get the current user's rating here
-            const userRating = data.ratings[0]; // Example logic, update as needed
+            const userRating = data.ratings[0]; 
             setSelectedRating(userRating);
             setHasRated(true);
           } else {
@@ -65,25 +58,21 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
     fetchUserRating();
   }, [id]);
 
-  // Toggle the state for description
   const toggleDescription = () => {
     setShowFullDescription((prevState) => !prevState);
   };
 
-  // Truncate description to 15 words
   const truncatedDescription =
     description.split(" ").slice(0, 15).join(" ") + "...";
 
-  // Handle rating selection and submission
   const handleRatingClick = async (rating) => {
-    if (hasRated) return; // Prevent rating if the user has already rated
+    if (hasRated) return;
 
-    // Update the UI immediately
     setSelectedRating(rating);
     setHasRated(true);
 
     try {
-      const token = localStorage.getItem("token"); // Assuming token is stored in localStorage
+      const token = localStorage.getItem("token");
       if (!token) {
         console.warn("User is not authenticated");
         setHasRated(false);
@@ -95,7 +84,7 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Include token in headers if required
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ foodId: id, rating }),
       });
@@ -105,13 +94,13 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
         console.log("Rating submitted:", data);
       } else {
         console.error("Error submitting rating:", data.message);
-        // Optionally, reset the rating in case of an error
+
         setSelectedRating(0);
         setHasRated(false);
       }
     } catch (error) {
       console.error("Server error:", error);
-      // Optionally, reset the rating in case of an error
+
       setSelectedRating(0);
       setHasRated(false);
     }
@@ -193,7 +182,6 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
   );
 };
 
-// Define PropTypes for type checking
 FoodItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
