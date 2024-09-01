@@ -1,0 +1,232 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Ensure the navbar has a background color */
+    z-index: 1000; /* Make sure the navbar stays on top of other content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.navbar .logo{
+    width: 100px;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    color: #49557e;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: #fff4f2;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li{
+    cursor: pointer;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile{
+    position: relative;
+}
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: tomato;
+}
+
+/* CSS for the theme toggle button as a switch */
+.theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #49557e;
+    border-radius: 25px;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    color: tomato;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.dark .navbar {
+    background-color: #444; /* Optional: adjust the navbar background in dark mode */
+}
+
+body.dark .navbar-menu,
+body.dark .navbar-right {
+    color: #ffffff;
+}
+
+body.dark .theme-toggle {
+    color: #ffffff;
+}
+
+.theme-toggle.light-mode {
+    background-color: #ffffff; /* Yellow background for light mode */
+}
+
+.theme-toggle.dark-mode {
+    background-color: #333; /* Dark background for dark mode */
+    color: white;
+}
+
+.theme-toggle .moon-icon,
+.theme-toggle .sun-icon {
+    position: absolute;
+    font-size: 18px;
+    /* transition: opacity 0.3s, transform 0.3s; */
+}
+
+.theme-toggle .moon-icon {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.theme-toggle .sun-icon {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.theme-toggle.light-mode .sun-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.theme-toggle.dark-mode .moon-icon {
+    opacity: 1;
+    transform: translateX(1);
+}
+
+
+@media (max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px){
+    .navbar-menu{
+        display: none;
+    }
+}

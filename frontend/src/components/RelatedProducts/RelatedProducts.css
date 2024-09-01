@@ -1,0 +1,109 @@
+.related-product-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+    position: relative;
+    padding: 10px; 
+}
+
+.related-product-item img {
+    width: 253px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+.related-product-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.related-product-item .product-price {
+    color: tomato;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.related-product-item .add {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 220px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.related-product-item .food-item-counter {
+    position: absolute;
+    bottom: 170px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+    color: rgb(117, 106, 105);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.related-product-item .food-item-counter img {
+    width: 30px;
+    height: 30px;
+}
+
+/* New styles */
+.related-products {
+    margin-top: 40px;
+}
+
+.related-products h2{
+    margin: 15px 0px;
+}
+
+.related-products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.related-product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.view-details-button {
+    color: #9a8585;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .related-product-description {
+    color: #9a8585;
+    font-size: 16px;
+  }
+  
+  .toggle-description {
+    color: rgb(102, 102, 116);
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .toggle-description:hover {
+    text-decoration: underline;
+  }
+  

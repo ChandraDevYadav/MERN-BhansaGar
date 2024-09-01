@@ -1,0 +1,63 @@
+/* SearchBar.css */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-icon-container {
+    position: relative;
+    width: 200px;
+  }
+
+  .search-icon-container button{
+    position: absolute;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  .search-icon-container button:hover{
+    background-color: transparent;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #999;
+    z-index: 1; /* Ensure the icon is above the input field */
+    transition: color 0.3s;
+    margin-top: 2px;
+  }
+  
+  .search-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 8px 8px 35px; /* Space for the icon */
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s, opacity 0.3s;
+    font-size: 16px;
+  }
+  
+  .search-input.open {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .search-icon.open {
+    color: #007bff;
+  }
+  

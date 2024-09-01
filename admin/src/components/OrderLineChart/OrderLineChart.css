@@ -1,0 +1,24 @@
+/* OrderLineChart.css */
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Add some space between the columns */
+}
+
+.chart-column, .order-list-column {
+  flex: 1;
+  /* padding: 20px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.chart-column {
+  max-width: 60%; /* Adjust width as needed */
+}
+
+.order-list-column {
+  max-width: 40%; /* Adjust width as needed */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
