@@ -45,8 +45,8 @@
     list-style: none;
     margin-bottom: 10px;
     cursor: pointer;
-    font-size: 14px;
-    line-height: 10px;
+    font-size: 16px;
+    line-height: 12px;
 }
 .footer-content-center h2, .footer-content-right h2 {
     color: white;
@@ -97,6 +97,11 @@
     .footer-social-icons img{
         width: 25px;
         margin-right: 10px;
+    }
+
+    .footer-content-center li, .footer-content-right li{
+    font-size: 12px;
+    line-height: 12px;
     }
 
 }

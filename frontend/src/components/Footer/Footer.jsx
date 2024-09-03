@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-content">
             <div className="footer-content-left">
                 <img src={assets.logo} alt=""/>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, fugiat.</p>
-                {/* <p><span>Code-Hustler Group&nbsp;&nbsp; 8 <sup>sem</sup>&nbsp; Project</span><br /> <br />Eastern College Of Engineering, Tinpaini-3 Biratnagar Morang (Koshi) Nepal</p> */}
+                {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, fugiat.</p> */}
+                <p><span>Code-Hustler Group&nbsp;&nbsp; 8 <sup>sem</sup>&nbsp; Project</span><br /> <br />Eastern College Of Engineering, Tinpaini-3 Biratnagar Morang (Koshi) Nepal</p>
                 
             </div>
             <div className="footer-content-center">
