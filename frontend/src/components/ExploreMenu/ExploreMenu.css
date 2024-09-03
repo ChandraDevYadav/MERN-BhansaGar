@@ -87,6 +87,18 @@
     padding: 2px;
 }
 
+@media (max-width:900px) {
+  .scroll-button.left {
+    left: -28px;
+}
+.scroll-button.right {
+  right: -28px;
+}
+.scroll-button{
+  font-size: 10px;
+  padding: 2px 3px;
+}
+}
 @media (max-width:1050px) {
     .explore-menu-text{
         max-width: 100%;

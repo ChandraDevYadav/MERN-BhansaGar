@@ -72,3 +72,11 @@
 .payment-method-inputs label{
     font-size: 18px;
 }
+
+@media (max-width:900px) {
+    .place-order{
+        display: flex;
+        flex-direction: column;
+        margin-top: 115px;
+    }
+}

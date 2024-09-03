@@ -55,3 +55,14 @@
     margin: 10px 0px;
   }
   
+
+  @media (max-width:900px) {
+    .product-info {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .product-details {
+      margin-top: 116px;
+  }
+}

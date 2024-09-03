@@ -90,10 +90,6 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Vegetarian",
-        menu_image: menu_6
-    },
-    {
         menu_name: "Non Veg",
         menu_image: menu_12
     },
@@ -102,7 +98,7 @@ export const menu_list = [
         menu_image: menu_10
     },
     {
-        menu_name: "Pasta",
+        menu_name: "Pizza",
         menu_image: menu_7
     },
     {
@@ -136,6 +132,10 @@ export const menu_list = [
     {
         menu_name: "Deserts",
         menu_image: menu_90
+    },
+    {
+        menu_name: "Vegetarian",
+        menu_image: menu_6
     },
     {
         menu_name: "Noodles",

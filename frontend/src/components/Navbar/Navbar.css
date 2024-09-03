@@ -206,6 +206,11 @@ body.dark .theme-toggle {
 }
 
 @media (max-width:900px){
+
+    .navbar{
+        padding: 0px 8px;
+    }
+
     .navbar .logo{
         width: 120px;
     }
@@ -215,6 +220,7 @@ body.dark .theme-toggle {
     }
     .navbar-right{
         gap: 20px;
+        padding-right: 22px;
     }
     .navbar-right img{
         width: 20px;

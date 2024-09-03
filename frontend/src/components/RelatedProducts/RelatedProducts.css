@@ -107,3 +107,14 @@
     text-decoration: underline;
   }
   
+
+  @media (max-width:900px) {
+    .related-products-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .product-info .product_img {
+        max-width: 300px;
+        height: 300px;
+    }
+}
