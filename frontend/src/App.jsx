@@ -11,6 +11,8 @@ import MyOrders from "./pages/MyOrders/MyOrders";
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import PaymentSuccess from "./components/PaymentSuccess";
 import PaymentFailure from "./components/PaymentFailure";
+import ResetPassword from "./components/ResetPassword/ResetPassword";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword"
 
 const App = () => {
 
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/payment/success" element={<PaymentSuccess />} />
           <Route path="/payment/failure" element={<PaymentFailure />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword/>} />
         </Routes>
       </div>
       <Footer />

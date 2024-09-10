@@ -130,7 +130,7 @@ const FoodItem = ({ id, name, price, description, image, ratings = [] }) => {
               alt="Remove from cart"
               style={{ cursor: "pointer" }}
             />
-            <p>{cartItems[id]}</p>
+            <p style={{marginTop:"0px"}}>{cartItems[id]}</p>
             <img
               onClick={() => addToCart(id)}
               src={assets.add_icon_green}

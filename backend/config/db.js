@@ -1,5 +1,14 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-export const connectDB = async () =>{
-    await mongoose.connect('mongodb+srv://resturantapp:9805912060@cluster0.azf1e.mongodb.net/food-del').then(()=>console.log("DB Connected"));
-}
+export const connectDB = async () => {
+    try {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
+        process.exit(1);
+    }
+};

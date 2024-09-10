@@ -16,6 +16,12 @@ a{
   color: inherit;
 }
 
+p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 0px;
+}
+
 .app{
   width: 80%;
   margin: auto;
